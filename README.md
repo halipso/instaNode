@@ -4,14 +4,14 @@ Instagram Node.js library
 # Installation
 
 ```
-var instaNode = require('./index.js');
+var instaLib = require('./index.js');
 ```
 
 # Usage
 Instantiate a instagram object...
 
 ```js
-var instagram = new instaNode();
+var instagram = new instaLib();
 ```
 
 ...then setup session:

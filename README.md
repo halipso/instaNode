@@ -20,7 +20,7 @@ var instagram = new instaNode();
 instagram.setCookies('cookies');
 ```
 
-...Important: you need to use getFeed function once at the beggining to get CSRF token
+Important: you need to use getFeed method once at the beggining to get CSRF token
 
 # Methods
 

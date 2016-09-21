@@ -8,16 +8,6 @@ function instaLib() {
 	this.request = Request.defaults({"jar": this._jar, "timeout": 50000, "gzip": true});
 }
 
-instaLib.prototype.setCookie = function(cookie) {
-	var cookieName = cookie.match(/(.+)=/)[1];
-	if(cookieName == 'steamLogin') {
-		this.steamID = new SteamID(cookie.match(/=(\d+)/)[1]);
-	}
-
-	var isSecure = !!cookieName.match(/(^steamMachineAuth|^steamLoginSecure$)/);
-	this._jar.setCookie(Request.cookie(cookie), (isSecure ? "https://" : "http://") + "store.steampowered.com");
-};
-
 instaLib.prototype.setCookies = function(cookies) {
 	var self = this;
 	cookies.forEach(function(cookie) {
